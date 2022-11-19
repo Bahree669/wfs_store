@@ -1,0 +1,30 @@
+.heroSection {
+    &__container {
+        flex-direction: column;
+        gap: 2em;
+        align-items: flex-start;
+        justify-content: end;
+
+        width: 100%;
+        margin-top: 20em;
+        padding-bottom: 5em;
+
+        max-width: 90%;
+        margin-inline: auto;
+    }
+
+    &__tagline {
+        color: var(--c-white);
+
+        font-size: var(--fs-600);
+        text-transform: capitalize;
+    }
+
+    @media screen and (min-width: 1000px) {
+        &__container {
+            padding: 0 3em;
+            padding-bottom: 5em;
+            max-width: var(--max-width);
+        }
+    }
+}
