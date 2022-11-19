@@ -1,0 +1,27 @@
+.heroBackground {
+    height: 100%;
+    width: 100%;
+    max-width: 4000px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+
+    &__container {
+        height: 120%;
+    }
+
+    &__image {
+        height: inherit;
+        width: inherit;
+
+        position: sticky;
+        top: 0;
+
+        background: no-repeat url("/assets/images/hero background.webp");
+        background-position: center;
+        background-size: cover;
+    }
+}
