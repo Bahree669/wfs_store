@@ -1,0 +1,12 @@
+.linkButton {
+    background: var(--c-white);
+    color: var(--c-green);
+    padding: 14px 28px;
+    border-radius: 20em;
+    width: max-content;
+
+    &--green {
+        background: var(--c-green);
+        color: var(--c-white);
+    }
+}

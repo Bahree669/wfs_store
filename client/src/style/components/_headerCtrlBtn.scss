@@ -1,0 +1,24 @@
+.headerCtrlBtn {
+    --hcb-d: 35px;
+
+    color: var(--c-white);
+    width: var(--hcb-d);
+    gap: var(--gap, 0.3em);
+
+    transition: gap 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+
+    &__bar {
+        width: var(--hcb-d);
+        height: 2.5px;
+        background: var(--c-green);
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    @media screen and (min-width: 1000px) {
+        display: none;
+        background: yellow;
+    }
+}
