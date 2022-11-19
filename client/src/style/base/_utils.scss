@@ -1,0 +1,49 @@
+/* 
+REUSABLE UTILITY CLASS
+*/
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+    gap: var(--gap, 0.5em);
+}
+
+/* 
+ELEMENT WITH THIS CLASS IS VISUALLY HIDDEN FROM USER 👇
+*/
+.sr_only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important; /* 2 */
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+}
+/* 
+ELEMENT WITH THIS CLASS IS VISUALLY HIDDEN FROM USER 👆
+*/
+
+.btn_reset {
+    outline: none;
+    border: none;
+    background: none;
+}
+
+.focus__ring {
+    --fr-o-size: 1.5px;
+
+    outline: solid var(--fr-o-size) var(--fr-o-clr);
+    outline-offset: var(--fr-o-size);
+
+    &:focus {
+        --fr-o-clr: var(--c-green);
+    }
+}
