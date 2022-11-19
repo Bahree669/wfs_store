@@ -1,12 +1,58 @@
 .linkButton {
+    --lb-wiper-bottom: -100%;
+    --lb-wiper-color: var(--c-green);
+    --lb-name-color: var(--c-green);
+
     background: var(--c-white);
     color: var(--c-green);
     padding: 14px 28px;
     border-radius: 20em;
     width: max-content;
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    text-transform: capitalize;
+    position: relative;
+    transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+
+    &:is(.linkButton--green) {
+        --lb-name-color: var(--c-green);
+    }
 
     &--green {
         background: var(--c-green);
         color: var(--c-white);
+    }
+
+    &__name {
+        mix-blend-mode: var(--lb-mix-blend);
+        position: relative;
+        opacity: var(--lb-name-opacity, 1);
+        z-index: 2;
+    }
+
+    &__wiper {
+        position: absolute;
+        bottom: var(--lb-wiper-bottom);
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        opacity: var(--lb-wiper-opacity, 0);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: bottom 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    &:hover {
+        --lb-wiper-bottom: 0;
+        --lb-name-opacity: 0;
+        --lb-wiper-opacity: 1;
+        transform: scale(1.04);
     }
 }
