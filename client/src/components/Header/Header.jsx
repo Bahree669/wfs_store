@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
+import useScrollDirection from "../../utils/hooks/useScrollDirection";
+import useViewport from "../../utils/hooks/useViewport";
 
 import HeaderCtrlButton from "../HeaderCtrlButton/HeaderCtrlButton";
 import LinkButton from "../LinkButton/LinkButton";
@@ -12,6 +14,8 @@ const navLinks = [
 
 const Header = () => {
     const [navMobileOpen, setNavMobileOpen] = useState(false);
+    const scrollDir = useScrollDirection();
+    const vw = useViewport();
 
     const toggleMobileNav = () => setNavMobileOpen((prev) => !prev);
 
@@ -25,13 +29,12 @@ const Header = () => {
 
     return (
         <div className='header'>
-            {navMobileOpen && <div className='header__backdrop'></div>}
+            {navMobileOpen && <div className='header__backdrop' onClick={toggleMobileNav}></div>}
 
             <header
                 className='header__container'
                 style={{
-                    "--h-bgc": navMobileOpen && "rgba(0,0,0,.2)",
-                    "--h-height": navMobileOpen && "100vh",
+                    "--h-top": scrollDir < 0 && vw > 1000 ? "-100%" : "0",
                 }}
                 onClick={(e) => toggleMobileNav(e)}
             >
