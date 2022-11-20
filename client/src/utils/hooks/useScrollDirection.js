@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const useScrollDirection = () => {
-    const [direction, setDirection] = useState(1);
+    const [direction, setDirection] = useState(-1);
 
     useEffect(() => {
         const trackScroll = (e) => {
@@ -20,6 +20,10 @@ const useScrollDirection = () => {
             window.removeEventListener("wheel", trackScroll);
         };
     }, [direction]);
+
+    useEffect(() => {
+        setDirection(1);
+    }, []);
 
     return direction;
 };
