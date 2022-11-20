@@ -1,4 +1,4 @@
-.linkButton {
+.clickableComponentRound {
     --lb-wiper-bottom: -100%;
     --lb-wiper-color: var(--c-green);
     --lb-name-color: var(--c-green);
@@ -17,7 +17,7 @@
     position: relative;
     transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 
-    &:is(.linkButton--green) {
+    &:is(.clickableComponentRound--green) {
         --lb-name-color: var(--c-green);
         --fr-o-clr: var(--c-green);
     }
