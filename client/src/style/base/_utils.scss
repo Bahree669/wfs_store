@@ -37,17 +37,6 @@ ELEMENT WITH THIS CLASS IS VISUALLY HIDDEN FROM USER 👆
     background: none;
 }
 
-.focus__ring {
-    --fr-o-size: 1.5px;
-
-    outline: solid var(--fr-o-size) var(--fr-o-clr);
-    outline-offset: var(--fr-o-size);
-
-    &:focus {
-        --fr-o-clr: var(--c-green);
-    }
-}
-
 /* 
 ========== CONTENT WRAPPER
 */

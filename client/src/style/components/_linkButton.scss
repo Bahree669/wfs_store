@@ -2,6 +2,7 @@
     --lb-wiper-bottom: -100%;
     --lb-wiper-color: var(--c-green);
     --lb-name-color: var(--c-green);
+    --fr-o-clr: var(--c-white);
 
     background: var(--c-white);
     color: var(--c-green);
@@ -18,6 +19,7 @@
 
     &:is(.linkButton--green) {
         --lb-name-color: var(--c-green);
+        --fr-o-clr: var(--c-green);
     }
 
     &--green {
@@ -54,5 +56,12 @@
         --lb-name-opacity: 0;
         --lb-wiper-opacity: 1;
         transform: scale(1.04);
+    }
+
+    &:focus {
+        --fr-o-size: 1.5px;
+
+        outline: solid var(--fr-o-size) var(--fr-o-clr);
+        outline-offset: var(--fr-o-size);
     }
 }
