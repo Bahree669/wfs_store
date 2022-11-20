@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import useScrollDirection from "../../utils/hooks/useScrollDirection";
 import useViewport from "../../utils/hooks/useViewport";
 
 import HeaderCtrlButton from "../HeaderCtrlButton/HeaderCtrlButton";
-import LinkButton from "../LinkButton/LinkButton";
+import ClickableComponentRound from "../ClickableComponentRound/ClickableComponentRound";
 import Logo from "../Logo/Logo";
 
 const navLinks = [
@@ -69,7 +69,7 @@ const Header = () => {
                             ))}
                         </ul>
 
-                        <LinkButton name='Get me some fruits' to={"/"} variant={"green"} />
+                        <ClickableComponentRound name='Get me some fruits' to={"/"} variant={"green"} />
                     </div>
                 </nav>
 

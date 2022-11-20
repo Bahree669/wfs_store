@@ -1,4 +1,4 @@
-import LinkButton from "../LinkButton/LinkButton";
+import ClickableComponentRound from "../ClickableComponentRound/ClickableComponentRound";
 import ContentWrapper from "../ContentWrapper/ContentWrapper";
 import HeroBackground from "../HeroBackground/HeroBackground";
 
@@ -14,7 +14,7 @@ function HeroSection() {
                         the best quality.
                     </h1>
 
-                    <LinkButton to={"/"} name={"Get me some fruits"} />
+                    <ClickableComponentRound to={"/"} name={"Get me some fruits"} />
                 </div>
             </ContentWrapper>
 

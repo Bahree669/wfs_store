@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 
 import GridContainer from "../GridContainer/GridContainer";
 import ContentWrapper from "../ContentWrapper/ContentWrapper";
-import LinkButton from "../LinkButton/LinkButton";
+import ClickableComponentRound from "../ClickableComponentRound/ClickableComponentRound";
+import VideoModal from "../VideoModal/VideoModal";
 
 const MissionSection = () => {
     const [containerWidth, setContainerWidth] = useState(90);
@@ -36,7 +37,9 @@ const MissionSection = () => {
                     <div className='missionSection__content'>
                         <GridContainer variant={"reverse"}>
                             <div className='missionSection__image'>
-                                <div className='missionSection__image__img'></div>
+                                <div className='missionSection__image__img'>
+                                    <VideoModal />
+                                </div>
                             </div>
 
                             <div className='missionSection__content--right flex flex-col'>
@@ -48,7 +51,7 @@ const MissionSection = () => {
                                     environment.
                                 </h2>
 
-                                <LinkButton to={"/impacts"} name={"see our impacts"} variant={"green"} />
+                                <ClickableComponentRound to={"/impacts"} name={"see our impacts"} variant={"green"} />
                             </div>
                         </GridContainer>
                     </div>
