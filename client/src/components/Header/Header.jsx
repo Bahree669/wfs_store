@@ -63,7 +63,7 @@ const Header = () => {
                                         animationName: navMobileOpen ? "navListUp" : "navListDown",
                                     }}
                                 >
-                                    <NavLink className='header__navLink' to={link.to}>
+                                    <NavLink className='header__navLink fw-sm' to={link.to}>
                                         {link.name}
                                     </NavLink>
                                 </li>
