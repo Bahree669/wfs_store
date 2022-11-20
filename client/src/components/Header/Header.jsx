@@ -36,7 +36,7 @@ const Header = () => {
                 style={{
                     "--h-top": scrollDir < 0 && vw > 1000 ? "-100%" : "0",
                 }}
-                onClick={(e) => toggleMobileNav(e)}
+                onClick={vw < 1000 && toggleMobileNav}
             >
                 <nav
                     id='mainNav'
