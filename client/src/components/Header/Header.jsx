@@ -5,6 +5,7 @@ import useViewport from "../../utils/hooks/useViewport";
 
 import HeaderCtrlButton from "../HeaderCtrlButton/HeaderCtrlButton";
 import LinkButton from "../LinkButton/LinkButton";
+import Logo from "../Logo/Logo";
 
 const navLinks = [
     { to: "/", name: "Home" },
@@ -36,7 +37,7 @@ const Header = () => {
                 style={{
                     "--h-top": scrollDir < 0 && vw > 1000 ? "-100%" : "0",
                 }}
-                onClick={vw < 1000 && toggleMobileNav}
+                onClick={vw < 1000 ? toggleMobileNav : () => 1}
             >
                 <nav
                     id='mainNav'
@@ -45,9 +46,7 @@ const Header = () => {
                     onClick={(e) => e.stopPropagation()}
                 >
                     <div className='header__navTop flex'>
-                        <Link to='/' className='header__logo ff-sans fw-black'>
-                            WSF.
-                        </Link>
+                        <Logo />
 
                         <HeaderCtrlButton state={navMobileOpen} onClick={toggleMobileNav} />
                     </div>

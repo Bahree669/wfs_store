@@ -1,0 +1,30 @@
+.logo {
+    font-size: 24px;
+    color: var(--c-green);
+    gap: var(--logo-gap, 0px);
+
+    transition: gap 0.5s ease-in-out;
+
+    &__word {
+        overflow: hidden;
+
+        &__rest {
+            display: inline-block;
+            width: 0px;
+
+            transition: width 0.5s ease-in-out;
+        }
+    }
+
+    &:hover {
+        --logo-gap: 0.3em;
+
+        .logo {
+            &__word {
+                &__rest {
+                    width: var(--lrw);
+                }
+            }
+        }
+    }
+}
