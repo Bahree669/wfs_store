@@ -8,6 +8,17 @@
     position: relative;
     isolation: isolate;
 
+    animation: missionTransUp 0.5s linear forwards;
+
+    @keyframes missionTransUp {
+        from {
+            transform: translateY(50px);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
     &__content {
         height: 100%;
         padding: 2em 1em;
