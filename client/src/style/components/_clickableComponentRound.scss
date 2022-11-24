@@ -11,6 +11,8 @@
     width: max-content;
     flex-shrink: 0;
 
+    cursor: pointer;
+
     overflow: hidden;
 
     text-transform: capitalize;
@@ -27,11 +29,17 @@
         color: var(--c-white);
     }
 
+    &--yellow {
+        background: var(--c-yellow);
+        --fr-o-clr: var(--c-yellow);
+    }
+
     &__name {
         mix-blend-mode: var(--lb-mix-blend);
-        position: relative;
         opacity: var(--lb-name-opacity, 1);
-        z-index: 2;
+
+        align-items: center;
+        gap: 0.3em;
     }
 
     &__wiper {
@@ -44,8 +52,8 @@
 
         opacity: var(--lb-wiper-opacity, 0);
 
-        display: flex;
         align-items: center;
+        gap: 0.3em;
         justify-content: center;
 
         transition: bottom 1s cubic-bezier(0.19, 1, 0.22, 1);
