@@ -7,8 +7,8 @@ const ClickableComponentRound = ({ role, to, name, variant, ...rest }) => {
                 {...rest}
                 className={`clickableComponentRound clickableComponentRound--${variant} btn_reset ff-sans fw-sm fs-sm focus__ring`}
             >
-                <span className='clickableComponentRound__name'>{name}</span>
-                <span className='clickableComponentRound__wiper'>{name}</span>
+                <span className='clickableComponentRound__name flex'>{name}</span>
+                <span className='clickableComponentRound__wiper flex'>{name}</span>
             </button>
         );
 
@@ -17,8 +17,8 @@ const ClickableComponentRound = ({ role, to, name, variant, ...rest }) => {
             to={to}
             className={`clickableComponentRound clickableComponentRound--${variant} ff-sans fw-sm fs-sm focus__ring`}
         >
-            <span className='clickableComponentRound__name'>{name}</span>
-            <span className='clickableComponentRound__wiper'>{name}</span>
+            <span className='clickableComponentRound__name flex'>{name}</span>
+            <span className='clickableComponentRound__wiper flex'>{name}</span>
         </Link>
     );
 };
