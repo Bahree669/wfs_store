@@ -1,0 +1,12 @@
+.footer {
+    position: relative;
+    min-height: 300px;
+    width: 100%;
+    top: -1em;
+    z-index: -1;
+
+    &__background {
+        height: 120%;
+        background: var(--c-green);
+    }
+}
