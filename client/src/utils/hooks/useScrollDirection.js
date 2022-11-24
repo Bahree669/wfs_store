@@ -1,29 +1,26 @@
 import { useEffect, useState } from "react";
 
 const useScrollDirection = () => {
-    const [direction, setDirection] = useState(-1);
+    const [scrollPos, setScrollPos] = useState(0);
+    const [direction, setDirection] = useState(1);
 
     useEffect(() => {
-        const trackScroll = (e) => {
-            const delta = e.wheelDelta;
-
-            if (delta > 0) {
+        const trackScroll = () => {
+            if (document.body.getBoundingClientRect().top > scrollPos) {
                 setDirection(1);
             } else {
                 setDirection(-1);
             }
+
+            setScrollPos(document.body.getBoundingClientRect().top);
         };
 
-        window.addEventListener("wheel", (e) => trackScroll(e), false);
+        window.addEventListener("scroll", () => trackScroll(), false);
 
         return () => {
-            window.removeEventListener("wheel", trackScroll);
+            window.removeEventListener("scroll", trackScroll);
         };
-    }, [direction]);
-
-    useEffect(() => {
-        setDirection(1);
-    }, []);
+    }, [scrollPos]);
 
     return direction;
 };
