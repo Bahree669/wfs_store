@@ -1,0 +1,29 @@
+.banner {
+    --banner-height: 25em;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    min-height: var(--banner-height);
+
+    &__container {
+        height: calc(var(--banner-height) + 3em);
+        width: 100%;
+        overflow: hidden;
+
+        position: absolute;
+        top: -2em;
+    }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+
+        background: no-repeat url("/assets/images/banner image.webp");
+        background-size: cover;
+        background-position: center;
+
+        filter: brightness(75%);
+
+        scale: 1.1;
+    }
+}
