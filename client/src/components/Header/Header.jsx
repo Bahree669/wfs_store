@@ -15,7 +15,7 @@ const navLinks = [
 
 const Header = () => {
     const [navMobileOpen, setNavMobileOpen] = useState(false);
-    const scrollDir = useScrollDirection();
+    const direction = useScrollDirection();
     const vw = useViewport();
 
     const toggleMobileNav = () => setNavMobileOpen((prev) => !prev);
@@ -35,13 +35,13 @@ const Header = () => {
             <header
                 className='header__container'
                 style={{
-                    "--h-top": scrollDir < 0 && vw > 1000 ? "-100%" : "0",
+                    "--h-top": direction < 0 ? "-100%" : "0",
                 }}
                 onClick={vw < 1000 ? toggleMobileNav : () => 1}
             >
                 <nav
                     id='mainNav'
-                    className='header__navContainer flex'
+                    className={`header__navContainer flex`}
                     style={{ "--navC-h": navMobileOpen ? "18em" : "3.6em" }}
                     onClick={(e) => e.stopPropagation()}
                 >
