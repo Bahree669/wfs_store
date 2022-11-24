@@ -1,7 +1,14 @@
-import { Header } from "../components";
+import { Banner, HeroSection, MissionSection, HomeProduct } from "../components";
 
 function Homepage() {
-    return <div></div>;
+    return (
+        <main className='homepage'>
+            <HeroSection />
+            <MissionSection />
+            <Banner />
+            <HomeProduct />
+        </main>
+    );
 }
 
 export default Homepage;
