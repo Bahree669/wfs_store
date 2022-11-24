@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { Header } from "./components";
+import { Header, Footer } from "./components";
 
 import Router from "./pages/Router";
 
@@ -8,6 +8,7 @@ const App = () => {
         <BrowserRouter>
             <Header />
             <Router />
+            <Footer />
         </BrowserRouter>
     );
 };
