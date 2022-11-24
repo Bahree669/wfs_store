@@ -2,20 +2,20 @@
     background: var(--c-soft-yellow);
 
     border-radius: 20px;
-    width: var(--ms-width, 90);
     margin-inline: auto;
 
+    width: var(--c-width, 90%);
+
     position: relative;
-    isolation: isolate;
 
     animation: missionTransUp 0.5s linear forwards;
 
     @keyframes missionTransUp {
         from {
-            transform: translateY(50px);
+            top: 50px;
         }
         to {
-            transform: translateY(0);
+            top: 0;
         }
     }
 
@@ -45,8 +45,8 @@
 
         &__img {
             background: url("/assets/images/mission\ image.webp");
-            height: inherit;
-            width: inherit;
+            height: 100%;
+            width: 100%;
             border-radius: 10px;
         }
     }
